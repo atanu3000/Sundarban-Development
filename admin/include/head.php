@@ -59,7 +59,6 @@
             position: relative;
             display: flex !important;
             align-items: center;
-            /* justify-content: center; */
             height: 100px;
             margin: 0;
         }
@@ -71,10 +70,12 @@
             outline: 0 !important;
         }
         table .products {
-            width: 100px;
-            height: 100px;
-            position: relative;
-            z-index: 1000;
+            /* width: 90px; */
+            height: 90px;
+            border-radius: 5px;
+        }
+        #center {
+            justify-content: center;
         }
     </style>
 

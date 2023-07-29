@@ -85,15 +85,7 @@ if (isset($_POST['search_item'])) {
                                             </span>
                                         </td>
                                         <td>
-                                            <?php
-                                            $imageName = $products['image'];
-                                            $imagePath = "form/images/" . $imageName;
-                                            ?>
-                                            <!-- <img src="<?php echo $imagePath; ?>" alt="product" class="products"> -->
-                                            <span> <img
-                                                    src="https://akshayakalpa.org/wp-content/uploads/2021/01/Honey-Header.png"
-                                                    alt="" class="products"></span>
-                                            <!-- <span><img src="/form/images/1690307238red_bells.jpg" alt="" class="products"></span> -->
+                                            <span id="center"><img src="include/form/images/<?php echo $products['image']; ?>" alt="product" class="products"></span>
                                         </td>
                                         <td>
                                             <span>

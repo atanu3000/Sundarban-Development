@@ -30,7 +30,7 @@
     </div>
     <div class="my-4">
         <label class="form-label">Payment Mode: &nbsp;&nbsp;</label>
-        <input type="radio" name="pmode" value="cash">cash
+        <input type="radio" name="pmode" value="cash">Cash
         <input type="radio" name="pmode" value="UPI">UPI
         <input type="radio" name="pmode" value="Net Banking">Net Banking
     </div>

@@ -15,7 +15,9 @@
                 <?php include("include/nav.php") ?>
                 <h1 class="text-center">Dashboard</h1>
                 <div class="flow-container">
-                    <h3 class="add">Add Product</h3> <span id="rightArrow">&rarr;</span> <h3 class="view">Products</h3>
+                    <h3 class="add">Add Product</h3> 
+                    <span id="rightArrow">&gt;</i></span> 
+                <h3 class="view">Products</h3>
                 </div>
             </div>
             <!-- End of Main Content -->

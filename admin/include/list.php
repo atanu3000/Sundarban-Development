@@ -12,7 +12,7 @@ $res = mysqli_query($connect, $query);
         <table class="table table-striped table-hover border border-2">
             <thead>
                 <tr>
-                    <th scope="col"><span> No</span>.</th>
+                    <!-- <th scope="col"><span> No</span>.</th> -->
                     <th scope="col"><span> Product</span></th>
                     <th scope="col"><span> Price</span></th>
                     <th scope="col"><span> Location</span></th>
@@ -26,11 +26,11 @@ $res = mysqli_query($connect, $query);
             <tbody>
                 <?php while ($row = mysqli_fetch_array($res)) { ?>
                     <tr>
-                        <td scope="row">
+                        <!-- <td scope="row">
                             <span>
                                 <?php echo $row['id']; ?>
                             </span>
-                        </td>
+                        </td> -->
                         <td>
                             <span>
                                 <?php echo $row['pname']; ?>
@@ -52,13 +52,7 @@ $res = mysqli_query($connect, $query);
                             </span>
                         </td>
                         <td>
-                            <?php
-                            $imageName = $row['image'];
-                            $imagePath = "form/images/" . $imageName;
-                            ?>
-                            <!-- <img src="<?php echo $imagePath; ?>" alt="product" class="products"> -->
-                            <span> <img src="https://akshayakalpa.org/wp-content/uploads/2021/01/Honey-Header.png" alt="" class="products"></span>
-                            <!-- <span><img src="/form/images/1690307238red_bells.jpg" alt="" class="products"></span> -->
+                            <span><img src="include/form/images/<?php echo $row['image']; ?>" alt="product" class="products"></span>
                         </td>
                         <td>
                             <span>
@@ -66,13 +60,13 @@ $res = mysqli_query($connect, $query);
                             </span>
                         </td>
                         <td>
-                            <span>
+                            <span id="center">
                                 <a href="#" class="btn"> <i class="fa-solid fa-pen-to-square fa-xl" style="color: #ffdd00;"></i></a>
                             </span>
                         </td>
                         <td>
-                            <span>
-                                <a href="#" class="btn"> <i class="fa-solid fa-trash fa-xl" style="color: #ff0000;"></i></a>
+                            <span id="center">
+                                <a href="delete_products.php?id=<?php echo $row['id']?>" onclick="return confirm('Are you sure?')" class="btn"> <i class="fa-solid fa-trash fa-xl" style="color: #ff0000;"></i></a>
                             </span>
                         </td>
                     </tr>
