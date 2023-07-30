@@ -54,13 +54,16 @@
             position: absolute;
             right: 0;
         }
-
-        table tbody tr > * > *{
+        table tr > * > *{
             position: relative;
             display: flex !important;
             align-items: center;
+            justify-content: center;
             height: 100px;
             margin: 0;
+        }
+        table thead tr > * > * {
+            height: 30px !important;
         }
         table td {
             padding: 0 0.75em !important;
@@ -73,9 +76,6 @@
             /* width: 90px; */
             height: 90px;
             border-radius: 5px;
-        }
-        #center {
-            justify-content: center;
         }
     </style>
 

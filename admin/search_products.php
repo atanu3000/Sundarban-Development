@@ -45,7 +45,6 @@ if (isset($_POST['search_item'])) {
                         <table class="table table-striped table-hover border border-2">
                             <thead>
                                 <tr>
-                                    <th scope="col"><span> No</span>.</th>
                                     <th scope="col"><span> Product</span></th>
                                     <th scope="col"><span> Price</span></th>
                                     <th scope="col"><span> Location</span></th>
@@ -59,11 +58,6 @@ if (isset($_POST['search_item'])) {
                             <tbody>
                                 <?php foreach ($search_results as $products) { ?>
                                     <tr>
-                                        <td scope="row">
-                                            <span>
-                                                <?php echo $products['id']; ?>
-                                            </span>
-                                        </td>
                                         <td>
                                             <span>
                                                 <?php echo $products['pname']; ?>
@@ -85,7 +79,7 @@ if (isset($_POST['search_item'])) {
                                             </span>
                                         </td>
                                         <td>
-                                            <span id="center"><img src="include/form/images/<?php echo $products['image']; ?>" alt="product" class="products"></span>
+                                            <span><img src="include/form/images/<?php echo $products['image']; ?>" alt="product" class="products"></span>
                                         </td>
                                         <td>
                                             <span>
@@ -94,13 +88,13 @@ if (isset($_POST['search_item'])) {
                                         </td>
                                         <td>
                                             <span>
-                                                <a href="#" class="btn"> <i class="fa-solid fa-pen-to-square fa-xl"
+                                                <a href="form.php?id=<?php echo $products['id']?>" class="btn"> <i class="fa-solid fa-pen-to-square fa-xl"
                                                         style="color: #ffdd00;"></i></a>
                                             </span>
                                         </td>
                                         <td>
                                             <span>
-                                                <a href="#" class="btn"> <i class="fa-solid fa-trash fa-xl"
+                                                <a href="delete_products.php?id=<?php echo $products['id']?>" onclick="return confirm('Are you sure?')" class="btn"> <i class="fa-solid fa-trash fa-xl"
                                                         style="color: #ff0000;"></i></a>
                                             </span>
                                         </td>
@@ -112,7 +106,7 @@ if (isset($_POST['search_item'])) {
                         <h2 class="text-center">No products found with the given name.</h2>
                     <?php } ?>
                 </div>
-                <div class="text-center mt-4">
+                <div class="text-center mt-5">
                     <a class="btn btn-primary" href="products.php">Back to Products</a>
                 </div>
             </div>

@@ -60,12 +60,12 @@ $res = mysqli_query($connect, $query);
                             </span>
                         </td>
                         <td>
-                            <span id="center">
-                                <a href="#" class="btn"> <i class="fa-solid fa-pen-to-square fa-xl" style="color: #ffdd00;"></i></a>
+                            <span>
+                                <a href="form.php?id=<?php echo $row['id']?>" class="btn"> <i class="fa-solid fa-pen-to-square fa-xl" style="color: #ffdd00;"></i></a>
                             </span>
                         </td>
                         <td>
-                            <span id="center">
+                            <span>
                                 <a href="delete_products.php?id=<?php echo $row['id']?>" onclick="return confirm('Are you sure?')" class="btn"> <i class="fa-solid fa-trash fa-xl" style="color: #ff0000;"></i></a>
                             </span>
                         </td>
