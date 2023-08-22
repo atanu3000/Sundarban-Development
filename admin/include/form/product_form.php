@@ -44,6 +44,10 @@ if (isset($_GET['id'])) {
     <div class="my-4">
         <label class="form-label d-block fs-5">Give relevant images</label>
         <input type="file" name="image" required />
+        <?php if($product_id) { ?>
+                <img class="update_image" src="include/form/images/<?php echo $products['image']; ?>" alt="product image" >
+        <?php } ?>
+        
     </div>
     <div class="my-4">
         <label class="form-label">Location: </label>

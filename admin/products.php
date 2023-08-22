@@ -1,3 +1,10 @@
+<?php 
+session_start();
+
+if($_SESSION['adminid']=="" || !isset($_SESSION['adminid'])) {
+  header("location: login.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <?php include("include/head.php") ?>

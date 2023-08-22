@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="shortcut icon" href="logo/logo.png" type="image/x-icon">
 
-    <title>Admin - Dashboard</title>
+    <title>Sundarban Development</title>
 
     <!-- Custom fonts for this template-->
     <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -72,7 +73,8 @@
             padding: 0 !important;
             outline: 0 !important;
         }
-        table .products {
+        table .products,
+        .update_image {
             /* width: 90px; */
             height: 90px;
             border-radius: 5px;

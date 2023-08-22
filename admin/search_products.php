@@ -1,4 +1,10 @@
-<?php
+<?php 
+session_start();
+
+if($_SESSION['adminid']=="" || !isset($_SESSION['adminid'])) {
+  header("location: login.php");
+}
+
 // Assuming you've already connected to your database here.
 $connect = mysqli_connect("localhost", "root", "", "project");
 $search_results = [];

@@ -21,7 +21,11 @@
 
     <!-- Topbar Navbar -->
     <ul class="navbar-nav ml-auto">
-
+        <li class="nav-item dropdown no-arrow mx-1">
+            <a class="nav-link btn btn-dark mt-2" href="logout.php" role="button" style="height: 40px">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </a>
+        </li>
         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
         <li class="nav-item dropdown no-arrow d-sm-none">
             <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"

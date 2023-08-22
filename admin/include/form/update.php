@@ -6,13 +6,16 @@ $connect = mysqli_connect("localhost", "root", "", "project");
     $product_id = $_POST['id'];
     $pname = $_POST["pname"];
     $price = $_POST["price"];
+    $image = "";
 
-    $image = $_FILES["image"]["name"];
-    $image = time() . $image;
-    $path = $_FILES["image"]["tmp_name"];
+    if(isset($_FILES["image"]["name"])){
+        $image = $_FILES["image"]["name"];
+        $image = time() . $image;
+        $path = $_FILES["image"]["tmp_name"];
 
-    move_uploaded_file($path, "images/" . $image);
-
+        move_uploaded_file($path, "images/" . $image);
+    }
+    
     $location = $_POST["location"];
 
     $d_location = "";
