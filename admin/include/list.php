@@ -19,18 +19,12 @@ $res = mysqli_query($connect, $query);
                     <th scope="col"><span> Delivery Spots</span></th>
                     <th scope="col"><span> Photo</span></th>
                     <th scope="col"><span> Payment Mode</span></th>
-                    <th scope="col"><span> Edit</span></th>
-                    <th scope="col"><span> Delete</span></th>
+                    <th scope="col"><span> Action</span></th>
                 </tr>
             </thead>
             <tbody>
                 <?php while ($row = mysqli_fetch_array($res)) { ?>
                     <tr>
-                        <!-- <td scope="row">
-                            <span>
-                                <?php echo $row['id']; ?>
-                            </span>
-                        </td> -->
                         <td>
                             <span>
                                 <?php echo $row['pname']; ?>
@@ -61,12 +55,8 @@ $res = mysqli_query($connect, $query);
                         </td>
                         <td>
                             <span>
-                                <a href="form.php?id=<?php echo $row['id']?>" class="btn"> <i class="fa-solid fa-pen-to-square fa-xl" style="color: #ffdd00;"></i></a>
-                            </span>
-                        </td>
-                        <td>
-                            <span>
-                                <a href="delete_products.php?id=<?php echo $row['id']?>" onclick="return confirm('Are you sure?')" class="btn"> <i class="fa-solid fa-trash fa-xl" style="color: #ff0000;"></i></a>
+                                <a href="form.php?id=<?php echo $row['id']?>" class="btn mx-3"> <i class="fa-solid fa-pen-to-square fa-xl" style="color: #ffdd00;"></i></a>
+                                <a href="delete_products.php?id=<?php echo $row['id']?>" onclick="return confirm('Are you sure?')" class="btn mx-3"> <i class="fa-solid fa-trash fa-xl" style="color: #ff0000;"></i></a>
                             </span>
                         </td>
                     </tr>

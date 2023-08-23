@@ -9,7 +9,7 @@
         <!-- <i class="fa-solid fa-toolbox"></i> -->
         <i class="fa-solid fa-gear fa-spin"></i>
     </div>
-    <div class="sidebar-brand-text mx-3">Admin Panel <sup></sup></div>
+    <div class="sidebar-brand-text mx-3">Admin Panel</div>
 </a>
 
 <!-- Divider -->
@@ -19,7 +19,7 @@
 <li class="nav-item active">
     <a class="nav-link" href="dashboard.php">
         <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>Dashboard</span></a>
+        <h6 class="d-inline">Dashboard</h6></a>
 </li>
 
 <!-- Divider -->
@@ -27,16 +27,16 @@
 
 
 <!-- Nav Item - Charts -->
-<li class="nav-item">
+<li class="nav-item active">
     <a class="nav-link" href="form.php">
-    <i class="fa-solid fa-plus"></i> <span>Add Product</span></a>
+    <i class="fa-solid fa-plus"></i> <h6 class="d-inline">Add Product</h6></a>
 </li>
 
 <!-- Nav Item - Tables -->
-<li class="nav-item">
+<li class="nav-item active">
     <a class="nav-link" href="products.php">
         <i class="fas fa-fw fa-table"></i>
-        <span>Products</span></a>
+        <h6 class="d-inline">Products</h6></a>
 </li>
 
 <!-- Divider -->
