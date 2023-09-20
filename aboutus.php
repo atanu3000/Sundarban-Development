@@ -3,7 +3,7 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php $title = " Home"; ?>
+<?php $title = " About"; ?>
 <?php include("./partials/head.php"); ?>
 
 <body>

@@ -5,7 +5,7 @@
 
 <body class="min-h-screen flex items-center">
 
-    <form class="w-96 mx-auto" method="POST" action="login_db.php">
+    <form class="w-[calc(90vw)] sm:w-96 mx-auto" method="POST" action="login_db.php">
         <div class="mb-6">
             <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
             <input type="email" id="email" name="email"
@@ -20,8 +20,12 @@
                 required>
         </div>
         <p class="my-4">Do you have not any account? <a href="./register.php" class="text-blue-600">Create Account</a></p>
+        <!-- <div class="flex justify-between items-center"> -->
         <button type="submit"
             class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login</button>
+            <button type="button"
+            class="md:hidden ml-5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onclick="window.location = '../admin/form.php'">Login as Admin</button>
+        <!-- </div> -->
     </form>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>

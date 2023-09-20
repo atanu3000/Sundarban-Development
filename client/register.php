@@ -5,7 +5,7 @@
 
 <body class="min-h-screen flex items-center">
 
-    <form class="w-96 mx-auto" method="POST" action="register_db.php">
+    <form class="w-[calc(90vw)] sm:w-96 mx-auto " method="POST" action="register_db.php">
         <div class="mb-6">
             <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Name</label>
             <input type="text" id="name" name="name"

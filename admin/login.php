@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="assets/loginStyle.css">
 <body>
     <div id="form">
-        <h1>Welcome back</h1> <br />
+        <h1>Welcome Admin</h1> <br />
         <form name="form" action="login_db.php" method="POST">
             <div>
                 <label >Username or email: </label>
