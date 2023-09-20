@@ -43,7 +43,7 @@ if (isset($_GET['id'])) {
     </div>
     <div class="my-4">
         <label class="form-label d-block fs-5">Give relevant images</label>
-        <input type="file" name="image" required />
+        <input type="file" name="image" <?php if (!$product_id) {echo "required";} ?> />
         <?php if($product_id) { ?>
                 <img class="update_image" src="include/form/images/<?php echo $products['image']; ?>" alt="product image" >
         <?php } ?>
