@@ -36,9 +36,11 @@
                             d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                     </svg>
                 </div>
-                <input type="text" id="search-navbar"
-                    class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Search...">
+                <form>
+                    <input type="text" id="search-navbar"
+                        class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Searching...">
+                </form>
             </div>
             <ul
                 class="flex flex-col gap-3 p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
@@ -78,9 +80,10 @@
                     <?php if (!isset($_SESSION['cid'])) { ?>
                         <a href="./client/login.php"
                             class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Login</a>
-                    <?php } else {?>
+                    <?php } else { ?>
                         <a href="./client/logout.php"
-                            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" onclick="return confirm('Are you sure?')">Logout</a>
+                            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                            onclick="return confirm('Are you sure?')">Logout</a>
                     <?php } ?>
                 </li>
             </ul>
@@ -105,8 +108,12 @@
                     </svg>
                     <span class="sr-only">Search icon</span>
                 </div>
-                <input type="text" id="search-navbar"
-                    class="block w-full p-2 pl-10 text-sm text-black border border-gray-300" placeholder="Search...">
+                <form method="post" action="search.php">
+                    <input type="text" id="search-navbar" name="search-item"
+                        class="block w-full p-2 pl-10 text-sm text-black border border-gray-300"
+                        autocomplete="off"
+                        placeholder="Search...">
+                </form>
             </div>
             <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search"
                 aria-expanded="false"
@@ -120,7 +127,8 @@
             </button>
         </div>
         <div class="hidden md:flex md:order-3 gap-3">
-            <a href="#" class="py-2 pl-3 pr-4 hover:text-black hover:bg-gray-500 bg-slate-800 text-white rounded"
+            <a href="./cart.php"
+                class="py-2 pl-3 pr-4 hover:text-black hover:bg-gray-500 bg-slate-800 text-white rounded"
                 aria-current="page">
                 <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewBox="0 0 18 20">
@@ -139,9 +147,11 @@
                     </svg>
                 </a>
             <?php } else { ?>
-                <a href="./client/logout.php" class="py-2 pl-3 pr-4 hover:text-black hover:bg-gray-500 bg-slate-800 text-white rounded" onclick="return confirm('Are you sure?')">
-                    <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                        fill="none" viewBox="0 0 16 16">
+                <a href="./client/logout.php"
+                    class="py-2 pl-3 pr-4 hover:text-black hover:bg-gray-500 bg-slate-800 text-white rounded"
+                    onclick="return confirm('Are you sure?')">
+                    <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 16 16">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 8h11m0 0-4-4m4 4-4 4m-5 3H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h3" />
                     </svg>
