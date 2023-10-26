@@ -3,9 +3,21 @@
 <?php $title = " Home"; ?>
 <?php include("../partials/head.php"); ?>
 
-<body class="min-h-screen flex items-center">
-
-    <form class="w-[calc(90vw)] sm:w-96 mx-auto " method="POST" action="register_db.php">
+<body class="min-h-screen flex items-center bg-gray-100">
+    <div class="flex content-stretch w-full justify-center min-h-[500px]">
+        <div class="bg-[#0a472e] slef-stretch w-80 px-5 py-10 flex flex-col justify-between">
+            <div>
+                <h2 class="text-white text-2xl font-semibold">
+                    Do Register !
+                </h2>
+                <p class="text-white mt-5">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Illum, voluptatum.
+                </p>
+            </div>
+            <img src="../asset/poster.webp" style="border-radius: 60% 40% 61% 39% / 56% 52% 48% 44%  " alt="" class="w-[200px] mx-auto">
+        </div>
+        <form class="sm:w-96 bg-white h-full p-5 py-10 " method="POST" action="register_db.php">
         <div class="mb-6">
             <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Name</label>
             <input type="text" id="name" name="name"
@@ -46,7 +58,9 @@
             class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Register
             new account</button>
     </form>
+    </div>
 
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
 </body>
 

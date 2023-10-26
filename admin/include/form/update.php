@@ -16,14 +16,9 @@ if (isset($_FILES["image"]["name"])) {
     move_uploaded_file($path, "images/" . $image);
 }
 
-$location = $_POST["location"];
+$category = $_POST["category"];
 
-$d_location = "";
-if (isset($_POST["d_location"])) {
-    $d_location = implode(", ", $_POST["d_location"]);
-}
-
-$pmode = $_POST["pmode"];
+$rating = $_POST["rating"];
 
 if ($_FILES['image']['name'] && $_FILES['image']['name'] != "") {
     $image = $_FILES["image"]["name"];
@@ -43,11 +38,11 @@ if ($_FILES['image']['name'] && $_FILES['image']['name'] != "") {
 
         move_uploaded_file($path, "images/" . $image);
 
-        $update = "UPDATE products SET pname='$pname', price='$price', image='$image', location='$location', d_location='$d_location', pmode='$pmode' WHERE id = $product_id";
+        $update = "UPDATE products SET pname='$pname', price='$price', image='$image', category='$category', rating='$rating' WHERE id = $product_id";
 
     }
 } else {
-    $update = "UPDATE products SET pname='$pname', price='$price', location='$location', d_location='$d_location', pmode='$pmode' WHERE id = $product_id";
+    $update = "UPDATE products SET pname='$pname', price='$price', category='$category', rating='$rating' WHERE id = $product_id";
 }
 
 
@@ -56,7 +51,7 @@ $result = mysqli_query($connect, $update);
 
 if ($result) {
     echo "<script>alert('Product Updated');</script>";
-    echo "<script>window.location.href = '../../products.php';</script>";
+    header("Location: ../../products.php");
 } else {
 
 }

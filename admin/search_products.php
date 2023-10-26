@@ -1,8 +1,8 @@
-<?php 
+<?php
 session_start();
 
-if($_SESSION['adminid']=="" || !isset($_SESSION['adminid'])) {
-  header("location: login.php");
+if ($_SESSION['adminid'] == "" || !isset($_SESSION['adminid'])) {
+    header("location: login.php");
 }
 
 // Assuming you've already connected to your database here.
@@ -51,19 +51,21 @@ if (isset($_POST['search_item'])) {
                         <table class="table table-striped table-hover border border-2">
                             <thead>
                                 <tr>
+                                    <th scope="col"><span> Image</span></th>
                                     <th scope="col"><span> Product</span></th>
                                     <th scope="col"><span> Price</span></th>
-                                    <th scope="col"><span> Location</span></th>
-                                    <th scope="col"><span> Delivery Spots</span></th>
-                                    <th scope="col"><span> Photo</span></th>
-                                    <th scope="col"><span> Payment Mode</span></th>
-                                    <th scope="col"><span> Edit</span></th>
-                                    <th scope="col"><span> Delete</span></th>
+                                    <th scope="col"><span> Category</span></th>
+                                    <th scope="col"><span> Rating</span></th>
+                                    <th scope="col"><span> Action</span></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach ($search_results as $products) { ?>
                                     <tr>
+                                        <td>
+                                            <span><img src="include/form/images/<?php echo $products['image']; ?>" alt="product"
+                                                    class="products"></span>
+                                        </td>
                                         <td>
                                             <span>
                                                 <?php echo $products['pname']; ?>
@@ -76,32 +78,21 @@ if (isset($_POST['search_item'])) {
                                         </td>
                                         <td>
                                             <span>
-                                                <?php echo $products['location']; ?>
+                                                <?php echo $products['category']; ?>
                                             </span>
                                         </td>
                                         <td>
                                             <span>
-                                                <?php echo $products['d_location']; ?>
-                                            </span>
-                                        </td>
-                                        <td>
-                                            <span><img src="include/form/images/<?php echo $products['image']; ?>" alt="product" class="products"></span>
-                                        </td>
-                                        <td>
-                                            <span>
-                                                <?php echo $products['pmode']; ?>
+                                                <?php echo $products['rating']; ?>
                                             </span>
                                         </td>
                                         <td>
                                             <span>
-                                                <a href="form.php?id=<?php echo $products['id']?>" class="btn"> <i class="fa-solid fa-pen-to-square fa-xl"
-                                                        style="color: #ffdd00;"></i></a>
-                                            </span>
-                                        </td>
-                                        <td>
-                                            <span>
-                                                <a href="delete_products.php?id=<?php echo $products['id']?>" onclick="return confirm('Are you sure?')" class="btn"> <i class="fa-solid fa-trash fa-xl"
-                                                        style="color: #ff0000;"></i></a>
+                                                <a href="form.php?id=<?php echo $products['id'] ?>" class="btn mx-3"> <i
+                                                        class="fa-solid fa-pen-to-square fa-xl" style="color: #ffdd00;"></i></a>
+                                                <a href="delete_products.php?id=<?php echo $products['id'] ?>"
+                                                    onclick="return confirm('Are you sure?')" class="btn mx-3"> <i
+                                                        class="fa-solid fa-trash fa-xl" style="color: #ff0000;"></i></a>
                                             </span>
                                         </td>
                                     </tr>

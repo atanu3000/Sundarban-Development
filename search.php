@@ -7,14 +7,18 @@ if (isset($_POST['search-item'])) {
     if (strlen(str_replace(" ", "", $_POST['search-item'])) == 0) {
         header('location: products.php');
     }
-    $search_query = $_POST['search-item'];
+    $search_item = $_POST['search-item'];
 
     // Sanitize the user input to prevent SQL injection (make sure to use a better method for production)
-    $search_query = mysqli_real_escape_string($connect, $search_query);
+    $search_item = mysqli_real_escape_string($connect, $search_item);
 
     // Perform the search query
-    $sql = "SELECT * FROM products WHERE pname LIKE '%$search_query%'";
+    $sql = "SELECT * FROM products WHERE pname LIKE '%$search_item%'";
     $res = mysqli_query($connect, $sql);
+
+    $p_name = "SELECT pname FROM products WHERE pname LIKE '%$search_item%'";
+    $p_name = mysqli_query($connect, $p_name);
+    $p_name = mysqli_fetch_array($p_name);
 
 } else {
     header('location: products.php');
@@ -22,7 +26,12 @@ if (isset($_POST['search-item'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php $title = " About"; ?>
+<?php 
+    $title = "";
+    if(isset($p_name['pname'])) {
+        $title = $p_name['pname'];
+    }
+?>
 <?php include("./partials/head.php"); ?>
 
 <body>

@@ -13,18 +13,21 @@ $res = mysqli_query($connect, $query);
             <thead>
                 <tr>
                     <!-- <th scope="col"><span> No</span>.</th> -->
+                    <th scope="col"><span> Image</span></th>
                     <th scope="col"><span> Product</span></th>
                     <th scope="col"><span> Price</span></th>
-                    <th scope="col"><span> Location</span></th>
-                    <th scope="col"><span> Delivery Spots</span></th>
-                    <th scope="col"><span> Photo</span></th>
-                    <th scope="col"><span> Payment Mode</span></th>
+                    <th scope="col"><span> Category</span></th>
+                    <th scope="col"><span> Rating</span></th>
                     <th scope="col"><span> Action</span></th>
                 </tr>
             </thead>
             <tbody>
                 <?php while ($row = mysqli_fetch_array($res)) { ?>
                     <tr>
+                        <td>
+                            <span><img src="include/form/images/<?php echo $row['image']; ?>" alt="product"
+                                    class="products"></span>
+                        </td>
                         <td>
                             <span>
                                 <?php echo $row['pname']; ?>
@@ -37,33 +40,28 @@ $res = mysqli_query($connect, $query);
                         </td>
                         <td>
                             <span>
-                                <?php echo $row['location']; ?>
+                                <?php echo $row['category']; ?>
                             </span>
                         </td>
                         <td>
                             <span>
-                                <?php echo $row['d_location']; ?>
-                            </span>
-                        </td>
-                        <td>
-                            <span><img src="include/form/images/<?php echo $row['image']; ?>" alt="product" class="products"></span>
-                        </td>
-                        <td>
-                            <span>
-                                <?php echo $row['pmode']; ?>
+                                <?php echo $row['rating']; ?>
                             </span>
                         </td>
                         <td>
                             <span>
-                                <a href="form.php?id=<?php echo $row['id']?>" class="btn mx-3"> <i class="fa-solid fa-pen-to-square fa-xl" style="color: #ffdd00;"></i></a>
-                                <a href="delete_products.php?id=<?php echo $row['id']?>" onclick="return confirm('Are you sure?')" class="btn mx-3"> <i class="fa-solid fa-trash fa-xl" style="color: #ff0000;"></i></a>
+                                <a href="form.php?id=<?php echo $row['id'] ?>" class="btn mx-3"> <i
+                                        class="fa-solid fa-pen-to-square fa-xl" style="color: #ffdd00;"></i></a>
+                                <a href="delete_products.php?id=<?php echo $row['id'] ?>"
+                                    onclick="return confirm('Are you sure?')" class="btn mx-3"> <i
+                                        class="fa-solid fa-trash fa-xl" style="color: #ff0000;"></i></a>
                             </span>
                         </td>
                     </tr>
-                
-                    <?php } ?>
+
+                <?php } ?>
             </tbody>
         </table>
-    
-        <?php } ?>
+
+    <?php } ?>
 </div>

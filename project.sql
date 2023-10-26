@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 10, 2023 at 08:35 PM
+-- Generation Time: Oct 25, 2023 at 06:15 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -52,6 +52,7 @@ CREATE TABLE `cart` (
   `id` int(11) NOT NULL,
   `client_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL DEFAULT 1,
   `time_stamp` int(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -59,10 +60,10 @@ CREATE TABLE `cart` (
 -- Dumping data for table `cart`
 --
 
-INSERT INTO `cart` (`id`, `client_id`, `product_id`, `time_stamp`) VALUES
-(1, 3, 5, 1695307775),
-(6, 3, 3, 1695566539),
-(7, 3, 1, 1696943714);
+INSERT INTO `cart` (`id`, `client_id`, `product_id`, `quantity`, `time_stamp`) VALUES
+(3, 2, 3, 1, 1697654670),
+(14, 3, 2, 1, 1698244057),
+(15, 3, 7, 2, 1698244062);
 
 -- --------------------------------------------------------
 
@@ -74,16 +75,49 @@ CREATE TABLE `client_db` (
   `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `pass` varchar(200) NOT NULL
+  `pass` varchar(200) NOT NULL,
+  `address` varchar(500) DEFAULT NULL,
+  `ph_no` int(11) NOT NULL,
+  `pincode` int(11) NOT NULL,
+  `city` varchar(100) NOT NULL,
+  `district` varchar(100) NOT NULL,
+  `state` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `client_db`
 --
 
-INSERT INTO `client_db` (`id`, `name`, `email`, `pass`) VALUES
-(2, 'Atanu Paul', 'atanu.paul123456789@gmail.com', 'atanu3000'),
-(3, 'John Doe', 'john@gmail.com', '12345');
+INSERT INTO `client_db` (`id`, `name`, `email`, `pass`, `address`, `ph_no`, `pincode`, `city`, `district`, `state`) VALUES
+(2, 'Atanu Paul', 'atanu.paul123456789@gmail.com', 'atanu3000', '', 0, 0, '', '', ''),
+(3, 'John Doe', 'john@gmail.com', '12345', '109/1/3 Balivara Road Naihati North 24 Parganas WB - 743135', 2147483647, 743135, 'Naihati', 'North 24 Parganas', 'WB');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order_db`
+--
+
+CREATE TABLE `order_db` (
+  `order_id` int(11) NOT NULL,
+  `product_id` varchar(50) NOT NULL,
+  `payment_id` varchar(50) NOT NULL,
+  `client_id` varchar(50) NOT NULL,
+  `address` varchar(300) NOT NULL,
+  `added_date` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `order_db`
+--
+
+INSERT INTO `order_db` (`order_id`, `product_id`, `payment_id`, `client_id`, `address`, `added_date`) VALUES
+(1, '4,6,1', 'pay_MsLyNkyAiexB6c', '3', '109/1/3 Balivara Road Naihati North 24 Parganas WB - 743135', '2023-10-25 12:44:22'),
+(2, '4,6,1', 'pay_MsMEHZiCxuK3ae', '3', '109/1/3 Balivara Road Naihati North 24 Parganas WB - 743135', '2023-10-25 12:59:25'),
+(3, '4,6,1', 'pay_MsMG8UdCGX9K7N', '3', '109/1/3 Balivara Road Naihati North 24 Parganas WB - 743135', '2023-10-25 13:01:10'),
+(4, '4,6,1', 'pay_MsMNLu6Oric97p', '3', '109/1/3 Balivara Road Naihati North 24 Parganas WB - 743135', '2023-10-25 13:07:59'),
+(5, '4,6,1', 'pay_MsMSNZKi9eE14g', '3', '109/1/3 Balivara Road Naihati North 24 Parganas WB - 743135', '2023-10-25 13:12:45'),
+(6, '4,6,1', 'pay_MsMV7nYgBH8E6W', '3', '109/1/3 Balivara Road Naihati North 24 Parganas WB - 743135', '2023-10-25 13:15:21');
 
 -- --------------------------------------------------------
 
@@ -93,24 +127,26 @@ INSERT INTO `client_db` (`id`, `name`, `email`, `pass`) VALUES
 
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
-  `pname` varchar(30) NOT NULL,
-  `price` varchar(30) NOT NULL,
-  `image` varchar(30) NOT NULL,
-  `location` varchar(100) NOT NULL,
-  `d_location` varchar(100) NOT NULL,
-  `pmode` varchar(30) NOT NULL
+  `pname` varchar(300) NOT NULL,
+  `price` int(30) NOT NULL,
+  `image` varchar(300) NOT NULL,
+  `category` varchar(100) NOT NULL,
+  `description` varchar(500) NOT NULL,
+  `rating` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `pname`, `price`, `image`, `location`, `d_location`, `pmode`) VALUES
-(1, 'Honey', '180', '1690005623Sundarban Honey.jpeg', 'L1', 'A, B', 'Cash'),
-(3, 'Fish', '840', '1690702938Hilsa.jpg', 'L1', 'A', 'UPI'),
-(4, 'Cow Ghee', '400', '1690640705cow_ghee.jpg', 'L3', 'B, C', 'UPI'),
-(5, 'Eucalystus', '150', '1690728945eucalyptus.jpg', 'L2', 'A, B, C', 'Net Banking'),
-(11, 'Red Bells', '300', '1692808165red_bells.jpg', 'L2', 'A, C', 'UPI');
+INSERT INTO `products` (`id`, `pname`, `price`, `image`, `category`, `description`, `rating`) VALUES
+(1, 'Desi Danedar Ghee 500ml Glass jar', 120, '1697639161Desi Danedar Ghee 500ml Glass jar.jpg', 'ghee', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque quod sapiente maiores ipsum maxime asperiores. Ad nesciunt recusandae odio incidunt.', 4.9),
+(2, 'Organic Cow Ghee from Sundarban island, 250ml Glass jar', 135, '1697640864Organic Cow Ghee from Sundarban island, 250ml Glass jar.jpg', 'ghee', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque quod sapiente maiores ipsum maxime asperiores. Ad nesciunt recusandae odio incidunt.', 5),
+(3, 'Bonphool Coriander Honey , 250 Gram', 55, '1697640979Bonphool Coriander Honey , 250 Gram.png', 'honey', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque quod sapiente maiores ipsum maxime asperiores. Ad nesciunt recusandae odio incidunt.', 5),
+(4, 'Certified Organic Malai Paneer Handcrafted From Cow Milk, 200gm pack', 70, '1697641112Certified Organic Malai Paneer Handcrafted From Cow Milk, 200gm pack.jpg', 'dairy', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque quod sapiente maiores ipsum maxime asperiores. Ad nesciunt recusandae odio incidunt.', 4.7),
+(5, 'Jalbhora Sandesh (Plain) - 4 Pcs Pack', 40, '1697641191Jalbhora Sandesh (Plain) - 4 Pcs Pack.jpg', 'sweet', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque quod sapiente maiores ipsum maxime asperiores. Ad nesciunt recusandae odio incidunt.', 5),
+(6, 'Aam Sandesh - 4 Pcs Pack', 32, '1697641256Aam Sandesh - 4 Pcs Pack.jpg', 'sweet', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque quod sapiente maiores ipsum maxime asperiores. Ad nesciunt recusandae odio incidunt.', 4.2),
+(7, 'Organic Wild Sundarban Honey, 250g Glass Jar', 80, '1697641314Organic Wild Sundarban Honey, 250g Glass Jar.jpg', 'honey', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque quod sapiente maiores ipsum maxime asperiores. Ad nesciunt recusandae odio incidunt.', 4.5);
 
 --
 -- Indexes for dumped tables
@@ -135,6 +171,12 @@ ALTER TABLE `client_db`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `order_db`
+--
+ALTER TABLE `order_db`
+  ADD PRIMARY KEY (`order_id`);
+
+--
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
@@ -154,19 +196,25 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `client_db`
 --
 ALTER TABLE `client_db`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `order_db`
+--
+ALTER TABLE `order_db`
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
