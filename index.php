@@ -5,6 +5,7 @@ session_start();
 <html lang="en">
 <?php $title = " Home"; ?>
 <?php include("./partials/head.php"); ?>
+
 <body>
     <?php include("./partials/navbar.php") ?>
     <div id="default-carousel" class="relative w-full" data-carousel="slide">
@@ -154,18 +155,15 @@ session_start();
         <div class="py-20">
             <div class="md:w-[70vw] mx-auto flex items-center justify-center gap-10 flex-col">
                 <div class="flex flex-col mx-auto">
-                    <p class="text-xl text-green-500">Healthy food</p>
-                    <h2 class="text-5xl font-semibold">
-                        Our best selling products
+                    <h2 class="text-5xl font-semibold text-green-700">
+                        <span class="text-6xl">O</span>ur best selling products
                     </h2>
-                    <p class="text-xl text-gray-600 mt-7 font-light">Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Eaque, vero.</p>
                 </div>
                 <div class="flex justify-evenly w-full">
                     <div class="flex flex-col w-72 gap-3">
-                        <img src="admin\include\form\images\1697639161Desi Danedar Ghee 500ml Glass jar.jpg" alt="" class="h-56 object-cover rounded-xl">
-                        <h2 class="text-2xl font-semibold">Fresh Ghee</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas, velit!</p>
+                        <img src="admin\include\form\images\1698405616Desi Danedar Ghee 500ml Glass jar.jpg" alt=""
+                            class="h-56 object-cover rounded-xl">
+                        <h2 class="text-2xl font-semibold">100% Natural Ghee</h2>
                         <a href="./products.php?category=ghee"
                             class="uppercase px-8 py-3 rounded-full text-white bg-[#0a472e] hover:bg-green-800 w-max mt-5 flex items-center gap-3">
                             <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -177,10 +175,9 @@ session_start();
                             shop now</a>
                     </div>
                     <div class="flex flex-col w-72 gap-3">
-                        <img src="admin\include\form\images\1697641314Organic Wild Sundarban Honey, 250g Glass Jar.jpg"
+                        <img src="admin\include\form\images\1698405724Organic Wild Sundarban Honey, 250gm.jpg"
                             class="h-56 object-cover rounded-xl" alt="">
-                        <h2 class="text-2xl font-semibold">Organic Honey</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas, velit!</p>
+                        <h2 class="text-2xl font-semibold">Organic & Tasty Honey</h2>
                         <a href="./products.php?category=honey"
                             class="uppercase px-8 py-3 rounded-full text-white bg-[#0a472e] hover:bg-green-800 w-max mt-5 flex items-center gap-3">
                             <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -192,10 +189,9 @@ session_start();
                             shop now</a>
                     </div>
                     <div class="flex flex-col w-72 gap-3">
-                        <img src="admin\include\form\images\1697641191Jalbhora Sandesh (Plain) - 4 Pcs Pack.jpg"
+                        <img src="admin\include\form\images\1698405696Certified Organic Malai Paneer Handcrafted From Cow Milk, 200gm pack.jpg"
                             class="h-56 object-cover rounded-xl" alt="">
-                        <h2 class="text-2xl font-semibold">Delicious Sweets</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas, velit!</p>
+                        <h2 class="text-2xl font-semibold">Fresh & Healthy Paneer</h2>
                         <a href="./products.php?category=sweet"
                             class="uppercase px-8 py-3 rounded-full text-white bg-[#0a472e] hover:bg-green-800 w-max mt-5 flex items-center gap-3">
                             <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -231,12 +227,76 @@ session_start();
                 </div>
             </div>
         </div>
+        <div
+            class="flex gap-10  md:mx-auto mx-6 items-center flex-wrap md:flex-nowrap justify-center bg-white  py-16">
+            <div class="flex flex-col gap-12 justify-between">
+                <h1 class="text-4xl text-green-700 font-semibold text-center capitalize"><span
+                        class="text-5xl">O</span>ur Products with best quality</h1>
+                <div class="flex gap-8 items-center w-[85vw]">
+                    <div class="flex flex-col gap-6">
+                        <div class="flex gap-2 items-center">
+                            <img src="https://sundarbansjfmc.org/wp-content/uploads/2022/06/natural-leaves-logo.png"
+                                class="w-16" alt="">
+                            <div class="flex flex-col gap-2">
+                                <h2 class="text-lg font-semibold">100% Natural</h2>
+                                <p>Free from pesticides, chemicals, antibiotics & toxins</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-2 items-center">
+                            <img src="https://sundarbansjfmc.org/wp-content/uploads/2022/06/high-antioxidant-logo.png"
+                                class="w-16" alt="">
+                            <div class="flex flex-col gap-2">
+                                <h2 class="text-lg font-semibold">Powerful antioxidants</h2>
+                                <p>Full of vitamins, minerals as in raw form</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-2 items-center">
+                            <img src="https://sundarbansjfmc.org/wp-content/uploads/2022/06/feature-3.png.webp"
+                                class="w-16" alt="">
+                            <div class="flex flex-col gap-2">
+                                <h2 class="text-lg font-semibold">Rich in nutrients</h2>
+                                <p>There are atleast 31 vitamins & minerals in Natural honey. These include vitamin C,
+                                    phosphorus, magnesium, sodium, potassium and calcium</p>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="./asset/our-products.png" class="w-[400px]" alt="">
+                    <div class="flex flex-col gap-6">
+                        <div class="flex gap-2 items-center">
+                            <img src="https://sundarbansjfmc.org/wp-content/uploads/2022/06/honey-kept-on-plate.png.webp"
+                                class="w-16" alt="">
+                            <div class="flex flex-col gap-2">
+                                <h2 class="text-lg font-semibold">Curated Products</h2>
+                                <p>Eat local, consume local, closer to nature.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-2 items-center">
+                            <img src="https://sundarbansjfmc.org/wp-content/uploads/2022/06/feature-4.png.webp"
+                                class="w-16" alt="">
+                            <div class="flex flex-col gap-2">
+                                <h2 class="text-lg font-semibold">Boost Immunity</h2>
+                                <p>Free from harmful fertilizers & adulteration, comes with the power of double immunity
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex gap-2 items-center">
+                            <img src="https://sundarbansjfmc.org/wp-content/uploads/2022/06/feature-1.png.webp"
+                                class="w-16" alt="">
+                            <div class="flex flex-col gap-2">
+                                <h2 class="text-lg font-semibold">Conscious & ethical</h2>
+                                <p>Our Natural honey is sourced from deep Sundarban forests, preserving nature and the
+                                    natural way of beekeeping.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="py-20">
             <div class="md:w-[70vw] mx-auto">
                 <div class="flex flex-col items-center">
-                    <p class="text-xl text-green-500">Here’s what they have to say</p>
-                    <h2 class="text-5xl font-semibold mb-6">Our customer's reviews</h2>
+                    <h2 class="text-5xl font-semibold mb-6 text-green-700"><span class="text-6xl">O</span>ur customer's reviews</h2>
                     <div class="flex flex-wrap justify-center md:justify-between w-full mx-auto">
                         <div class="flex flex-col gap-5 bg-green-50 rounded-xl w-80 p-8 my-5">
                             <svg class="w-6 h-6 text-green-700 rotate-180" aria-hidden="true"
@@ -327,4 +387,5 @@ session_start();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
     <script src="asset/js/counting.js"></script>
 </body>
+
 </html>

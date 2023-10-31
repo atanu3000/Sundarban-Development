@@ -15,6 +15,7 @@
                 <input class="form-control" type="password" id="pass" name="pass" placeholder="Type your password" required> <br/>
             </div>
             <button class="form-control" type="submit" id="btn" value="Login" name="submit">Login</button>
+            <a id="btn" class="form-control" href="../client/login.php">Login as customer</a>
         </form>
     </div>
 </body>

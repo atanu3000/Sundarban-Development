@@ -6,6 +6,7 @@ $connect = mysqli_connect("localhost", "root", "", "project");
 $product_id = $_POST['id'];
 $pname = $_POST["pname"];
 $price = $_POST["price"];
+$discount = $_POST["discount"];
 $image = "";
 
 if (isset($_FILES["image"]["name"])) {
@@ -38,11 +39,11 @@ if ($_FILES['image']['name'] && $_FILES['image']['name'] != "") {
 
         move_uploaded_file($path, "images/" . $image);
 
-        $update = "UPDATE products SET pname='$pname', price='$price', image='$image', category='$category', rating='$rating' WHERE id = $product_id";
+        $update = "UPDATE products SET pname='$pname', price='$price', discount='$discount', image='$image', category='$category', rating='$rating' WHERE id = $product_id";
 
     }
 } else {
-    $update = "UPDATE products SET pname='$pname', price='$price', category='$category', rating='$rating' WHERE id = $product_id";
+    $update = "UPDATE products SET pname='$pname', price='$price', discount='$discount', category='$category', rating='$rating' WHERE id = $product_id";
 }
 
 
@@ -51,7 +52,7 @@ $result = mysqli_query($connect, $update);
 
 if ($result) {
     echo "<script>alert('Product Updated');</script>";
-    header("Location: ../../products.php");
+    header("Location: products.php");
 } else {
 
 }

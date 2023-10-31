@@ -24,7 +24,7 @@ $orders = mysqli_query($connect, $query);
         <?php if (mysqli_num_rows($orders) > 0) {
 
             while ($order = mysqli_fetch_assoc($orders)) {
-                $deliveryDate = date('M d, l', strtotime($order['added_date'] . ' +2 days'));
+                $deliveryDate = date('M d, D', strtotime($order['added_date'] . ' +2 days'));
                 $query = "SELECT * FROM products WHERE id IN (" . $order['product_id'] . ")";
                 $productsResult = mysqli_query($connect, $query);
 
@@ -37,6 +37,7 @@ $orders = mysqli_query($connect, $query);
   
                     $quantity = explode(",", $order["quantity"]);
                     $products = array_reverse($products);
+                    $quantity = array_reverse($quantity);
                 
                 foreach ($products as $index => $product) { ?>
 
@@ -57,8 +58,13 @@ $orders = mysqli_query($connect, $query);
                                         </p>
                                     </div>
                                 </div>
-                                <span class="font-bold text-lg w-20">
-                                    <?php echo "&#8377; " . number_format($product['price'] * $quantity[$index], 2, '.', ',') ?>
+                                <span class="font-bold text-lg w-24">
+                                    <?php 
+                                    $discount = $product['price'] * ($product['discount'] / 100);
+                                    $price = ($product['price'] - $discount) * $quantity[$index];
+                                    // array_push($discounted_price, $price);
+                                    echo "&#8377;" . number_format($price, 2, '.', ','); ?>
+                                    
                                 </span>
                                 <div class="flex flex-col gap-1 w-64">
                                     <?php if (strtotime(date('Y-m-d')) >= strtotime($deliveryDate)) { ?>
@@ -105,6 +111,7 @@ $orders = mysqli_query($connect, $query);
             </div>
         <?php } ?>
     </div>
+    <?php include("./partials/footer.php") ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
 </body>
 

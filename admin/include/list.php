@@ -16,6 +16,7 @@ $res = mysqli_query($connect, $query);
                     <th scope="col"><span> Image</span></th>
                     <th scope="col"><span> Product</span></th>
                     <th scope="col"><span> Price</span></th>
+                    <th scope="col"><span> Discount</span></th>
                     <th scope="col"><span> Category</span></th>
                     <th scope="col"><span> Rating</span></th>
                     <th scope="col"><span> Action</span></th>
@@ -36,6 +37,11 @@ $res = mysqli_query($connect, $query);
                         <td>
                             <span>
                                 <?php echo $row['price']; ?>
+                            </span>
+                        </td>
+                        <td>
+                            <span>
+                                <?php echo $row['discount']; ?>%
                             </span>
                         </td>
                         <td>

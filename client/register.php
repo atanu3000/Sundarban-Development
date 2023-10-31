@@ -15,7 +15,7 @@
                     Illum, voluptatum.
                 </p>
             </div>
-            <img src="../asset/poster.webp" style="border-radius: 60% 40% 61% 39% / 56% 52% 48% 44%  " alt="" class="w-[200px] mx-auto">
+            <img src="../asset/logo (4).png" alt="" class="w-[200px] mx-auto">
         </div>
         <form class="sm:w-96 bg-white h-full p-5 py-10 " method="POST" action="register_db.php">
         <div class="mb-6">

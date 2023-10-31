@@ -1,6 +1,8 @@
 <nav class="bg-[#0a472e] border-green-200 dark:bg-green-900 relative">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 px-6">
-        <a href="index.php" class="text-2xl text-white font-semibold">Sundarini</a>
+        <a href="index.php" class="text-2xl text-white font-semibold">
+            <img class="w-24 absolute top-1.5" src="./asset/brand3.png" alt="">
+        </a>
         <div class="flex md:order-2 order-1 justify-between w-full md:w-fit rounded-lg overflow-hidden">
             <button data-collapse-toggle="navbar-search" type="button"
                 class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-slate-500 rounded-lg md:hidden hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-green-200 dark:text-slate-400 dark:hover:bg-green-700 dark:focus:ring-green-600"
@@ -100,8 +102,8 @@
                     </li>
                 </ul>
             </div>
-            <a href="services.php">Services</a>
             <a href="aboutus.php">About</a>
+            <a href="contactus.php">Contact Us</a>
             <a href="orders.php">Orders</a>
             <a href="./cart.php" class="p-2  text-white rounded relative" aria-current="page">
                 <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -124,11 +126,14 @@
 
                 $res = mysqli_stmt_get_result($stmt);
                 $row = mysqli_fetch_assoc($res);
-                
+
                 if (isset($_SESSION['cid']) && $row['item_count'] > 0) { ?>
                     <div
                         class="w-5 h-5 pb-0.5 text-sm rounded-full bg-red-500 absolute flex items-center justify-center top-0 right-0">
-                        <?php echo $row['item_count'] ?>
+                        <?php if ($row['item_count'] <= 9)
+                            echo $row['item_count'];
+                        else
+                            echo '9+'; ?>
                     </div>
                 <?php } ?>
 
@@ -196,21 +201,24 @@
             class="grid max-w-screen-xl px-4 py-5 mx-auto text-slate-900 darkProductspro:text-white sm:grid-cols-2 md:px-6">
             <ul>
                 <li>
-                    <a href="http://localhost/Sundarban-Development/products.php" class="block p-3 rounded-lg hover:bg-green-100 dark:hover:bg-green-700">
+                    <a href="http://localhost/Sundarban-Development/products.php"
+                        class="block p-3 rounded-lg hover:bg-green-100 dark:hover:bg-green-700">
                         <div class="font-semibold">All</div>
                         <span class="text-sm text-slate-500 dark:text-slate-400">Connect with third-party tools that
                             you're already using.</span>
                     </a>
                 </li>
                 <li>
-                    <a href="http://localhost/Sundarban-Development/products.php?category=ghee" class="block p-3 rounded-lg hover:bg-green-100 dark:hover:bg-green-700">
+                    <a href="http://localhost/Sundarban-Development/products.php?category=honey"
+                        class="block p-3 rounded-lg hover:bg-green-100 dark:hover:bg-green-700">
                         <div class="font-semibold">Honey</div>
                         <span class="text-sm text-slate-500 dark:text-slate-400">Connect with third-party tools that
                             you're already using.</span>
                     </a>
                 </li>
                 <li>
-                    <a href="http://localhost/Sundarban-Development/products.php?category=ghee" class="block p-3 rounded-lg hover:bg-green-100 dark:hover:bg-green-700">
+                    <a href="http://localhost/Sundarban-Development/products.php?category=ghee"
+                        class="block p-3 rounded-lg hover:bg-green-100 dark:hover:bg-green-700">
                         <div class="font-semibold">Ghee</div>
                         <span class="text-sm text-slate-500 dark:text-slate-400">Connect with third-party tools that
                             you're already using.</span>
@@ -219,21 +227,24 @@
             </ul>
             <ul>
                 <li>
-                    <a href="http://localhost/Sundarban-Development/products.php?category=dairy" class="block p-3 rounded-lg hover:bg-green-100 dark:hover:bg-green-700">
+                    <a href="http://localhost/Sundarban-Development/products.php?category=dairy"
+                        class="block p-3 rounded-lg hover:bg-green-100 dark:hover:bg-green-700">
                         <div class="font-semibold">Milk & Milk Products</div>
                         <span class="text-sm text-slate-500 dark:text-slate-400">Connect with third-party tools that
                             you're already using.</span>
                     </a>
                 </li>
                 <li>
-                    <a href="http://localhost/Sundarban-Development/products.php?category=sweet" class="block p-3 rounded-lg hover:bg-green-100 dark:hover:bg-green-700">
+                    <a href="http://localhost/Sundarban-Development/products.php?category=sweet"
+                        class="block p-3 rounded-lg hover:bg-green-100 dark:hover:bg-green-700">
                         <div class="font-semibold">Sweets</div>
                         <span class="text-sm text-slate-500 dark:text-slate-400">Connect with third-party tools that
                             you're already using.</span>
                     </a>
                 </li>
                 <li>
-                    <a href="http://localhost/Sundarban-Development/products.php?category=snacks" class="block p-3 rounded-lg hover:bg-green-100 dark:hover:bg-green-700">
+                    <a href="http://localhost/Sundarban-Development/products.php?category=snacks"
+                        class="block p-3 rounded-lg hover:bg-green-100 dark:hover:bg-green-700">
                         <div class="font-semibold">Snacks</div>
                         <span class="text-sm text-slate-500 dark:text-slate-400">Connect with third-party tools that
                             you're already using.</span>
