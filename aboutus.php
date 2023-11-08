@@ -13,20 +13,20 @@ session_start();
         <div
             class="flex gap-10    md:mx-auto mx-6 items-center flex-wrap md:flex-nowrap justify-center bg-white px-44 py-16">
             <img src="./asset/our-mission.jpg" alt="product image" class="md:w-[35vw] h-[330px] w-1/2 rounded-lg">
-            <div class="flex flex-col gap-12 justify-between">
+            <div class="flex flex-col gap-10 justify-between">
                 <h1 class="text-4xl text-green-700 font-semibold"><span class="text-5xl">O</span>ur Vision</h1>
-                <p class="text-lg">"Our mission is to empower marginalized women farmers in the Sundarban Islands,
+                <p class="text-xl leading-8">Our vision is to empower marginalized women farmers in the Sundarban Islands,
                     enhancing their lives and
                     livelihoods. We provide certified, tested chemical-free food to both farmers and consumers,
                     fostering
-                    transparency in the process for a sustainable future."</p>
+                    transparency in the process for a sustainable future.</p>
             </div>
         </div>
         <div
             class="flex gap-10   md:mx-auto mx-6 my-5 items-center flex-wrap md:flex-nowrap justify-between px-44 py-16">
-            <div class="flex flex-col gap-12 justify-between">
+            <div class="flex flex-col gap-10 justify-between">
                 <h1 class="text-4xl text-green-700 font-semibold"><span class="text-5xl">O</span>ur Mision</h1>
-                <ul class="flex flex-col gap-3 text-lg">
+                <ul class="flex flex-col gap-3 text-xl leading-8">
                     <li>- Eliminate middle-men exploitation</li>
                     <li>- Prevent distress selling by farmers</li>
                     <li>- Facilitate direct farmer-consumer connections</li>
@@ -45,11 +45,11 @@ session_start();
                     Certification
                 </h1>
                 <div class="flex justify-between gap-20">
-                    <img src="https://www.sundarini.organic/public/assets/public/images/newbiz/512X512_b.jpg"
+                    <img src="asset/certificate1.jpg"
                         class="w-44 hover:scale-110 hover:shadow-2xl transition duration-300 ease-in-out" alt="">
-                    <img src="https://www.sundarini.organic/public/assets/public/images/newbiz/512X512_c.jpg"
+                    <img src="asset/certificate2.jpg"
                         class="w-44 hover:scale-110 hover:shadow-2xl transition duration-300 ease-in-out" alt="">
-                    <img src="https://www.sundarini.organic/public/assets/public/images/newbiz/512X512_a.jpg"
+                    <img src="asset/certificate3.jpg"
                         class="w-44 hover:scale-110 hover:shadow-2xl transition duration-300 ease-in-out" alt="">
                 </div>
             </div>
@@ -62,16 +62,16 @@ session_start();
                 </h1>
                 <div class="flex gap-10">
                     <img class="hover:scale-110 hover:shadow-2xl transition duration-300 ease-in-out"
-                        src="https://www.sundarini.organic/public/assets/public/images/newbiz/512X512_nddb.jpg"
+                        src="asset/award1.jpg"
                         class="w-32" alt="">
                     <img class="hover:scale-110 hover:shadow-2xl transition duration-300 ease-in-out"
-                        src="https://www.sundarini.organic/public/assets/public/images/newbiz/512X512_ficci.jpg"
+                        src="asset/award2.jpg"
                         class="w-32" alt="">
                     <img class="hover:scale-110 hover:shadow-2xl transition duration-300 ease-in-out"
-                        src="https://www.sundarini.organic/public/assets/public/images/newbiz/512X512_m%20a.jpg"
+                        src="asset/award3.jpg"
                         class="w-32" alt="">
                     <img class="hover:scale-110 hover:shadow-2xl transition duration-300 ease-in-out"
-                        src="https://www.sundarini.organic/public/assets/public/images/newbiz/512X512_infoasia.jpg"
+                        src="asset/award4.jpg"
                         class="w-32" alt="">
                 </div>
             </div>

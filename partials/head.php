@@ -1,7 +1,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sundarban Dev |
+    <title>Sundarini |
         <?php echo $title; ?>
     </title>
     <link rel="shortcut icon" href="http://localhost/Sundarban-Development/asset/logo.png" type="image/x-icon">

@@ -35,7 +35,6 @@ if ($_SESSION['adminid'] == "" || !isset($_SESSION['adminid'])) {
 
                 if (isset($_GET['id'])) {
                     $product_id = $_GET['id'];
-                    echo $product_id;
 
                     $select = "SELECT * FROM products WHERE id = $product_id";
                     $select_res = mysqli_query($connect, $select);

@@ -197,12 +197,12 @@ $discounted_price = array(); ?>
                     </div>
                     <hr>
                     <p class="text-green-600 font-semibold">
-                        You will save on
+                        You will save
                         <?php
                         $discountPrice = $totalPrice - $discountedPrice;
                         echo "&#8377;" . number_format($discountPrice, 2, '.', ',');
                         ?>
-                        this order
+                        on this order
                     </p>
                 </div>
             </div>

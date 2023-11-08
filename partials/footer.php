@@ -1,10 +1,10 @@
 <footer class="relative left-0 right-0 bottom-0 bg-[#0a472e] text-white">
-    <div class="flex justify-center md:gap-5 mx-auto py-10">
+    <div class="flex justify-center gap-10 md:gap-5 mx-auto py-10 flex-wrap">
         <div class="w-40 pt-10">
             <img src="./asset/brand3.png" alt="logo">
         </div>
-        <div class="relative flex justify-center md:gap-20">
-            <div class="flex flex-col gap-6 max-w-[300px] md:max-w-[400px]">
+        <div class="relative flex flex-wrap justify-center gap-20">
+            <div class="flex flex-col gap-6 max-w-[80vw] md:max-w-[400px]">
                 <h1 class="text-2xl font-semibold text-green-200">About Us</h1>
                 <p class="text-green-50 font-light">Sundarini Naturals, a farmers’ cooperative brand is working
                     tirelessly to make organic women farmers of UNESCO World Heritage Site - Sundarban Islands, healthy
@@ -41,8 +41,8 @@
                         </svg>
                     </a>
                     <a href="" class="hover:bg-green-700 p-3 rounded-full ">
-                        <svg class="w-5 h-5 text-white" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 14">
+                        <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 20 14">
                             <path fill-rule="evenodd"
                                 d="M19.7 3.037a4.26 4.26 0 0 0-.789-1.964 2.84 2.84 0 0 0-1.984-.84c-2.767-.2-6.926-.2-6.926-.2s-4.157 0-6.928.2a2.836 2.836 0 0 0-1.983.84A4.225 4.225 0 0 0 .3 3.038a30.148 30.148 0 0 0-.2 3.206v1.5c.01 1.071.076 2.142.2 3.206.094.712.363 1.39.784 1.972.604.536 1.38.837 2.187.848 1.583.15 6.731.2 6.731.2s4.161 0 6.928-.2a2.844 2.844 0 0 0 1.985-.84 4.27 4.27 0 0 0 .787-1.965c.124-1.064.19-2.135.2-3.206V6.243a30.672 30.672 0 0 0-.202-3.206ZM8.008 9.59V3.97l5.4 2.819-5.4 2.8Z"
                                 clip-rule="evenodd" />
@@ -50,9 +50,9 @@
                     </a>
                 </div>
             </div>
-            <div class="flex flex-col gap-6 max-w-[300px] md:max-w-[400px]">
+            <div class="flex flex-col gap-6 max-w-[80vw] md:max-w-[400px]">
                 <h1 class="text-2xl font-semibold text-green-200">Useful Links</h1>
-                <ul class="flex flex-col gap-3">
+                <ul class="flex flex-wrap sm:flex-col gap-3">
                     <li><a href="index.php">Home</a></li>
                     <li><a href="aboutus.php">About</a></li>
                     <li><a href="products.php">Products</a></li>
@@ -60,7 +60,7 @@
                     <li><a href="cart.php">Cart</a></li>
                 </ul>
             </div>
-            <div class="flex flex-col gap-6 max-w-[300px] md:max-w-[400px]">
+            <div class="flex flex-col gap-6 max-w-[80vw] md:max-w-[400px]">
                 <h1 class="text-2xl font-semibold text-green-200">Contact Us</h1>
                 <ul class="flex flex-col gap-3">
                     <li class="flex gap-3 items-center text-green-50">
@@ -99,3 +99,11 @@
         </div>
     </div>
 </footer>
+<script>
+    document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+    });
+    document.addEventListener('selectstart', function (e) {
+        e.preventDefault();
+    });
+</script>

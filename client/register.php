@@ -1,6 +1,13 @@
+<?php
+session_start();
+if(isset($_SESSION['cid'])){
+    header('location: ../index.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-<?php $title = " Home"; ?>
+<?php $title = " Register"; ?>
 <?php include("../partials/head.php"); ?>
 
 <body class="min-h-screen flex items-center bg-gray-100">
@@ -11,11 +18,10 @@
                     Do Register !
                 </h2>
                 <p class="text-white mt-5">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Illum, voluptatum.
+                "Welcome! Create your account to unlock exclusive benefits and join our community. Let's get started with your registration."
                 </p>
             </div>
-            <img src="../asset/logo (4).png" alt="" class="w-[200px] mx-auto">
+            <img src="../asset/logo (3).png" alt="" class="w-[200px] mx-auto">
         </div>
         <form class="sm:w-96 bg-white h-full p-5 py-10 " method="POST" action="register_db.php">
         <div class="mb-6">
@@ -35,6 +41,7 @@
                 password</label>
             <input type="password" id="password" name="pass"
                 class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                placeholder="password"
                 required>
         </div>
         <div class="mb-6">
@@ -42,6 +49,7 @@
                 password</label>
             <input type="password" id="repeat-password" name="c-pass"
                 class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                placeholder="confirm password"
                 required>
         </div>
         <div class="flex items-start mb-6">

@@ -5,6 +5,27 @@ session_start();
 <html lang="en">
 <?php $title = " Home"; ?>
 <?php include("./partials/head.php"); ?>
+<style>
+    .content-box {
+        position: relative;
+        width: 100%;
+    }
+
+    .content-box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        opacity: 0.35;
+    }
+
+    .content-box.box1::before {
+        background-image: url('asset/4574519.jpg');
+    }
+</style>
 
 <body>
     <?php include("./partials/navbar.php") ?>
@@ -80,74 +101,78 @@ session_start();
     </div>
 
     <div class="w-full mx-auto flex flex-col justify-center">
-        <div class="py-20">
-            <div class="md:w-[70vw] mx-auto flex items-center justify-center gap-10">
-                <div class="text flex flex-col">
-                    <p class="text-xl text-green-500">About us</p>
-                    <h2 class="text-5xl font-semibold">
-                        A New Way To Invest In Agriculture
-                    </h2>
-                    <p class="text-xl text-gray-600 mt-8 font-light">Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Eos laboriosam rerum esse corrupti provident, tempore numquam quia perspiciatis culpa
-                        repellat itaque qui ut quas excepturi magni aut nesciunt. Maxime, ad.</p>
-                    <a href="aboutus.php"
-                        class="bg-[#0a472e] hover:bg-green-800 rounded-full px-10 py-3 text-white text-xl font-light mt-8 w-max">About
-                        us</a>
+        <div class="mx-auto w-[95vw] py-20 overflow-hidden">
+            <img src="./asset/image.jpg" alt="" class="hover:scale-105 transition duration-300 ease-in-out">
+        </div>
+        <div class="py-20 content-box box1">
+            <div class="relative z-10 px-5 mx-auto flex flex-wrap items-center justify-center gap-10">
+                <div class="text flex flex-col w-[90vw] sm:w-[45vw]">
+                    <h1 class="text-2xl md:text-5xl text-green-900 font-semibold"><span
+                            class=" md:text-6xl">S</span>undarbans and Honey
+                    </h1>
+                    <p class="text-xl  mt-8 font-bold text-green-900 leading-10">There are many different species of
+                        bees in the Sundarbans and among them, apis dorsata type of bee comparatively makes more hives
+                        and honey. It is said that the honey collected from these hives are the best honey of the
+                        Sundarbans. This honey is dark red in colour and wild in taste with great medicinal values.</p>
                 </div>
                 <div>
-                    <img src="https://p.w3layouts.com/demos_new/template_demo/05-02-2021/agricfarm-liberty-demo_Free/1836878686/web/assets/images/ab3.jpg"
-                        class="md:w-[70vw] rounded-lg" alt="">
+                    <img src="asset/purehoney.jpg" class="lg:w-[430px] lg:h-[400px] rounded-lg" alt="">
                 </div>
             </div>
 
         </div>
 
         <div class="bg-green-50 py-20">
-            <div class="flex flex-row-reverse md:w-[70vw] mx-auto items-center justify-center gap-10">
-                <div class="text flex flex-col">
-                    <p class="text-xl text-green-500">What we do</p>
-                    <h2 class="text-5xl font-semibold">
-                        What We Offer For You
-                    </h2>
-                    <p class="text-xl text-gray-600 mt-8 font-light">Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Eos laboriosam rerum esse corrupti provident, tempore numquam quia.</p>
-                    <ul class="flex flex-col gap-5 pl-10 pt-10">
+            <div
+                class="px-5 flex flex-row-reverse flex-wrap  md:flex-wrap   mx-auto items-center justify-center gap-10">
+                <div class="text flex flex-col w-[90vw] sm:w-[45vw] pl-10">
+                    <h1 class="text-2xl md:text-4xl text-green-900 font-semibold"><span class=" md:text-5xl">W</span>hy
+                        you should choose Sundarini
+                    </h1>
+                    <p class="text-2xl text-gray-600 mt-8">A team of young professionals, technical experts
+                        work directly as employees of thousands of small & marginalized women dairy cooperative farmers
+                        of Sundarban Islands</p>
+                    <ul class="flex flex-col gap-5 pt-10 text-lg">
                         <li class="flex gap-3 items-center"><span><svg
                                     class="w-8 h-8 rounded-full text-green-700 p-1 bg-green-100" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" d="m7 10 2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                                </svg></span>Pest Control</li>
+                                </svg></span>Sundarini Naturals keeps the soil, animals, plants, humans healthy
+                        </li>
                         <li class="flex gap-3 items-center"><span><svg
                                     class="w-8 h-8 rounded-full text-green-700 p-1 bg-green-100" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" d="m7 10 2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                                </svg></span>Weed Control</li>
+                                </svg></span>Sundarini Naturals cares for traditional and indigenous produces</li>
                         <li class="flex gap-3 items-center"><span><svg
                                     class="w-8 h-8 rounded-full text-green-700 p-1 bg-green-100" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" d="m7 10 2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                                </svg></span>Grass Seeding</li>
+                                </svg></span>Sundarini Naturals is sustainable, local, seasonal & diverse
+                        </li>
                         <li class="flex gap-3 items-center"><span><svg
                                     class="w-8 h-8 rounded-full text-green-700 p-1 bg-green-100" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" d="m7 10 2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                                </svg></span>Industry Oriented</li>
+                                </svg></span>Sundarini Naturals is free from chemicals & adulteration
+                        </li>
                         <li class="flex gap-3 items-center"><span><svg
                                     class="w-8 h-8 rounded-full text-green-700 p-1 bg-green-100" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" d="m7 10 2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                                </svg></span>Fresh Milk products</li>
+                                </svg></span>Sundarini Naturals empowers small and marginalized women
+                            farmers of Sundarban</li>
 
                     </ul>
                 </div>
                 <div>
                     <img src="https://p.w3layouts.com/demos_new/template_demo/05-02-2021/agricfarm-liberty-demo_Free/1836878686/web/assets/images/ab4.jpg"
-                        class="md:w-[50vw] rounded-lg" alt="">
+                        class="lg:w-[400px] rounded-lg" alt="">
                 </div>
             </div>
         </div>
@@ -155,11 +180,11 @@ session_start();
         <div class="py-20">
             <div class="md:w-[70vw] mx-auto flex items-center justify-center gap-10 flex-col">
                 <div class="flex flex-col mx-auto">
-                    <h2 class="text-5xl font-semibold text-green-700">
-                        <span class="text-6xl">O</span>ur best selling products
-                    </h2>
+                    <h1 class="text-2xl md:text-4xl text-green-700 font-semibold text-center capitalize sm:pb-10"><span
+                            class=" md:text-5xl">O</span>ur best selling products
+                    </h1>
                 </div>
-                <div class="flex justify-evenly w-full">
+                <div class="flex flex-wrap gap-10 justify-evenly w-full">
                     <div class="flex flex-col w-72 gap-3">
                         <img src="admin\include\form\images\1698405616Desi Danedar Ghee 500ml Glass jar.jpg" alt=""
                             class="h-56 object-cover rounded-xl">
@@ -207,33 +232,12 @@ session_start();
             </div>
         </div>
 
-        <div class="bg-green-50 py-20" id="counter">
-            <div class="md:w-[70vw] mx-auto flex justify-evenly">
-                <div class="">
-                    <p class="count text-6xl font-bold text-green-800" max-data="510">1</p>
-                    <p class="text-2xl capitalize text-green-500 mt-4">custom products</p>
-                </div>
-                <div class="">
-                    <p class="count text-6xl font-bold text-green-800" max-data="625">1</p>
-                    <p class="text-2xl capitalize text-green-500 mt-4">our farms</p>
-                </div>
-                <div class="">
-                    <p class="count text-6xl font-bold text-green-800" max-data="750">1</p>
-                    <p class="text-2xl capitalize text-green-500 mt-4">happy customers</p>
-                </div>
-                <div class="">
-                    <p class="count text-6xl font-bold text-green-800" max-data="340">1</p>
-                    <p class="text-2xl capitalize text-green-500 mt-4">awards</p>
-                </div>
-            </div>
-        </div>
-        <div
-            class="flex gap-10  md:mx-auto mx-6 items-center flex-wrap md:flex-nowrap justify-center bg-white  py-16">
+        <div class="flex gap-10  md:mx-auto mx-6 items-center flex-wrap md:flex-nowrap justify-center bg-white  pt-10 pb-20">
             <div class="flex flex-col gap-12 justify-between">
-                <h1 class="text-4xl text-green-700 font-semibold text-center capitalize"><span
-                        class="text-5xl">O</span>ur Products with best quality</h1>
-                <div class="flex gap-8 items-center w-[85vw]">
-                    <div class="flex flex-col gap-6">
+                <h1 class="text-2xl md:text-4xl text-green-700 font-semibold text-center capitalize"><span
+                        class="text-3xl md:text-5xl">O</span>ur Products with best quality</h1>
+                <div class="flex flex-wrap justify-center gap-8 items-center">
+                    <div class="flex flex-col gap-6 max-w-[400px]">
                         <div class="flex gap-2 items-center">
                             <img src="https://sundarbansjfmc.org/wp-content/uploads/2022/06/natural-leaves-logo.png"
                                 class="w-16" alt="">
@@ -261,7 +265,7 @@ session_start();
                         </div>
                     </div>
                     <img src="./asset/our-products.png" class="w-[400px]" alt="">
-                    <div class="flex flex-col gap-6">
+                    <div class="flex flex-col gap-6 max-w-[400px]">
                         <div class="flex gap-2 items-center">
                             <img src="https://sundarbansjfmc.org/wp-content/uploads/2022/06/honey-kept-on-plate.png.webp"
                                 class="w-16" alt="">
@@ -293,54 +297,80 @@ session_start();
             </div>
         </div>
 
+        <div class="bg-green-50 py-20" id="counter">
+            <div class="md:w-[70vw] mx-auto flex flex-wrap justify-evenly gap-10">
+                <div class="px-5 flex flex-col items-center">
+                    <p class="count text-3xl sm:text-6xl font-bold text-green-800" max-data="510">1</p>
+                    <p class="text-2xl capitalize text-green-500 mt-4">custom products</p>
+                </div>
+                <div class="px-5 flex flex-col items-center">
+                    <p class="count text-3xl sm:text-6xl font-bold text-green-800" max-data="625">1</p>
+                    <p class="text-2xl capitalize text-green-500 mt-4">our farms</p>
+                </div>
+                <div class="px-5 flex flex-col items-center">
+                    <p class="count text-3xl sm:text-6xl font-bold text-green-800" max-data="750">1</p>
+                    <p class="text-2xl capitalize text-green-500 mt-4">happy customers</p>
+                </div>
+                <div class="px-5 flex flex-col items-center">
+                    <p class="count text-3xl sm:text-6xl font-bold text-green-800" max-data="340">1</p>
+                    <p class="text-2xl capitalize text-green-500 mt-4">awards</p>
+                </div>
+            </div>
+        </div>
+
         <div class="py-20">
             <div class="md:w-[70vw] mx-auto">
                 <div class="flex flex-col items-center">
-                    <h2 class="text-5xl font-semibold mb-6 text-green-700"><span class="text-6xl">O</span>ur customer's reviews</h2>
-                    <div class="flex flex-wrap justify-center md:justify-between w-full mx-auto">
-                        <div class="flex flex-col gap-5 bg-green-50 rounded-xl w-80 p-8 my-5">
+                    <h1 class="text-2xl md:text-4xl text-green-700 font-semibold text-center capitalize pb-20"><span
+                            class="text-3xl md:text-5xl">O</span>ur customer's
+                        reviews</h1>
+                    <div class="flex flex-wrap justify-center gap-10 mx-auto">
+                        <div class="relative flex flex-col gap-5 bg-green-50 rounded-xl w-80 p-8">
                             <svg class="w-6 h-6 text-green-700 rotate-180" aria-hidden="true"
                                 xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
                                 <path
                                     d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
                             </svg>
-                            <p class="text-lg text-gray-500 font-light">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos, rem!
+                            <p class="text-lg text-gray-500 pb-20 font-light">
+                                Organic Wild Sundarban Honey of Sundarini Naturals is safe and has a unique taste. I
+                                have faith on using this product for my grandchildren also.
                             </p>
-                            <div class="flex gap-5">
-                                <img src="https://avatars.githubusercontent.com/u/96945274?v=4" alt=""
+                            <div class="absolute bottom-6 flex gap-5 items-center">
+                                <img src="https://eportal.sundarini.organic/assets/images/thumb/1696485074-1696485074-591474134.jpg" class="w-14 rounded-full" alt=""
                                     class="rounded-full w-10">
-                                <p class="text-2xl font-semibold">Atanu Paul</p>
+                                <p class="text-2xl font-semibold">Ruban Pathak</p>
                             </div>
                         </div>
-                        <div class="flex flex-col gap-5 bg-green-50 rounded-xl w-80 p-8 my-5">
+                        <div class="relative flex flex-col gap-5 bg-green-50 rounded-xl w-80 p-8">
                             <svg class="w-6 h-6 text-green-700 rotate-180" aria-hidden="true"
                                 xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
                                 <path
                                     d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
                             </svg>
-                            <p class="text-lg text-gray-500 font-light">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos, rem!
+                            <p class="text-lg text-gray-500 pb-20 font-light">
+                                I absolutely love the Sundarini ghee. I have been using it for the last one year and
+                                till now have not seen the quality being compromised.
                             </p>
-                            <div class="flex gap-5">
-                                <img src="https://avatars.githubusercontent.com/u/96945274?v=4" alt=""
+                            <div class="absolute bottom-6 flex gap-5 items-center">
+                                <img src="https://eportal.sundarini.organic/assets/images/thumb/1696485107-1696485107-606193037.png" class="w-14 rounded-full" alt=""
                                     class="rounded-full w-10">
-                                <p class="text-2xl font-semibold">Atanu Paul</p>
+                                <p class="text-2xl font-semibold">Joy Sikdar</p>
                             </div>
                         </div>
-                        <div class="flex flex-col gap-5 bg-green-50 rounded-xl w-80 p-8 my-5">
+                        <div class="relative flex flex-col gap-5 bg-green-50 rounded-xl w-80 p-8">
                             <svg class="w-6 h-6 text-green-700 rotate-180" aria-hidden="true"
                                 xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
                                 <path
                                     d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
                             </svg>
-                            <p class="text-lg text-gray-500 font-light">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos, rem!
+                            <p class="text-lg text-gray-500 pb-20 font-light">
+                                Authentic sweets and other products like rice, dal, ghee - which were pure and fresh!!!
+                                Thanks Sundarini
                             </p>
-                            <div class="flex gap-5">
-                                <img src="https://avatars.githubusercontent.com/u/96945274?v=4" alt=""
+                            <div class="absolute bottom-6 flex gap-5 items-center">
+                                <img src="https://eportal.sundarini.organic/assets/images/thumb/1696485091-1696485091-155344644.jpg" class="w-14 rounded-full" alt=""
                                     class="rounded-full w-10">
-                                <p class="text-2xl font-semibold">Atanu Paul</p>
+                                <p class="text-2xl font-semibold">Tanima Das</p>
                             </div>
                         </div>
                     </div>
@@ -350,33 +380,37 @@ session_start();
 
         <div class="py-20">
             <div class="md:w-max mx-auto">
-                <div class="flex flex-wrap items-center justify-center w-full gap-5">
-                    <div class="flex gap-4 grow">
-                        <img src="https://sundarbansjfmc.org/wp-content/uploads/2022/06/icon-2.jpg.webp" alt="">
-                        <div class="flex flex-col gap-1 max-w-[200px]">
-                            <p class="text-lg font-semibold">Handmade</p>
-                            <p class="text-gray-600 text-sm">Made with passion by 300+ curators.</p>
+                <div class="flex sm:flex-row flex-col px-5 items-center justify-center gap-5">
+                    <div class="flex xl:flex-row flex-col gap-5">
+                        <div class="flex gap-4 min-w-[250px]">
+                            <img src="https://sundarbansjfmc.org/wp-content/uploads/2022/06/icon-2.jpg.webp" alt="">
+                            <div class="flex flex-col gap-1 max-w-[200px]">
+                                <p class="text-lg font-semibold">Handmade</p>
+                                <p class="text-gray-600 text-sm">Made with passion by 300+ curators.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 min-w-[250px]">
+                            <img src="https://sundarbansjfmc.org/wp-content/uploads/2022/06/icon-3.jpg.webp" alt="">
+                            <div class="flex flex-col gap-1 max-w-[200px]">
+                                <p class="text-lg font-semibold">100% Natural</p>
+                                <p class="text-gray-600 text-sm">Eat local, consume local, closer to nature.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="flex gap-4 grow">
-                        <img src="https://sundarbansjfmc.org/wp-content/uploads/2022/06/icon-3.jpg.webp" alt="">
-                        <div class="flex flex-col gap-1 max-w-[200px]">
-                            <p class="text-lg font-semibold">100% Natural</p>
-                            <p class="text-gray-600 text-sm">Eat local, consume local, closer to nature.</p>
+                    <div class="flex xl:flex-row flex-col gap-5">
+                        <div class="flex gap-4 min-w-[250px]">
+                            <img src="https://sundarbansjfmc.org/wp-content/uploads/2022/06/icon-40ok.jpg.webp" alt="">
+                            <div class="flex flex-col gap-1 max-w-[200px]">
+                                <p class="text-lg font-semibold">Shipping</p>
+                                <p class="text-gray-600 text-sm">All India Shipping</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="flex gap-4 grow">
-                        <img src="https://sundarbansjfmc.org/wp-content/uploads/2022/06/icon-40ok.jpg.webp" alt="">
-                        <div class="flex flex-col gap-1 max-w-[200px]">
-                            <p class="text-lg font-semibold">Shipping</p>
-                            <p class="text-gray-600 text-sm">All India Shipping</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-4 grow">
-                        <img src="https://sundarbansjfmc.org/wp-content/uploads/2022/06/icon-5.jpg.webp" alt="">
-                        <div class="flex flex-col gap-1 max-w-[200px]">
-                            <p class="text-lg font-semibold">Save Money</p>
-                            <p class="text-gray-600 text-sm">At lowest price</p>
+                        <div class="flex gap-4 min-w-[250px]">
+                            <img src="https://sundarbansjfmc.org/wp-content/uploads/2022/06/icon-5.jpg.webp" alt="">
+                            <div class="flex flex-col gap-1 max-w-[200px]">
+                                <p class="text-lg font-semibold">Save Money</p>
+                                <p class="text-gray-600 text-sm">At lowest price</p>
+                            </div>
                         </div>
                     </div>
                 </div>
