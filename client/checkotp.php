@@ -106,26 +106,25 @@ if (isset($_GET['id']) && !isset($_SESSION['cid'])) {
                 </h1>
                 <p class='text-gray-400 mt-2'>Enter 6 digit verification code on your Email ID</p>
             </div>
-            <form method='POST' class='flex flex-col gap-8 mt-5 md:w-[70%]'>
-                <!-- <input type='text' class='px-5 py-3 border-none bg-green-50 text-xl outline-1 focus:outline-green-600' placeholder='Enter Your OTP'> -->
+            <form method='POST' class='flex flex-col gap-8 mt-5'>
                 <div class='flex gap-2'>
                     <input type='text' maxlength='1' oninput='focusNext(this)' name='otp1'
-                        class='flex justify-center p-5 pl-8 bg-green-50 border-none w-20 text-xl focus:ring-green-500 focus:border-green-500'
+                        class='flex justify-center lg:p-5 p-4 lg:pl-8 pl-[26px] bg-green-50 border-none w-16 lg:w-20 text-xl focus:ring-green-500 focus:border-green-500'
                         placeholder='0'>
                     <input type='text' maxlength='1' oninput='focusNext(this)' name='otp2'
-                        class='flex justify-center p-5 pl-8 bg-green-50 border-none w-20 text-xl focus:ring-green-500 focus:border-green-500'
+                        class='flex justify-center lg:p-5 p-4 lg:pl-8 pl-[26px] bg-green-50 border-none w-16 lg:w-20 text-xl focus:ring-green-500 focus:border-green-500'
                         placeholder='0'>
                     <input type='text' maxlength='1' oninput='focusNext(this)' name='otp3'
-                        class='flex justify-center p-5 pl-8 bg-green-50 border-none w-20 text-xl focus:ring-green-500 focus:border-green-500'
+                        class='flex justify-center lg:p-5 p-4 lg:pl-8 pl-[26px] bg-green-50 border-none w-16 lg:w-20 text-xl focus:ring-green-500 focus:border-green-500'
                         placeholder='0'>
                     <input type='text' maxlength='1' oninput='focusNext(this)' name='otp4'
-                        class='flex justify-center p-5 pl-8 bg-green-50 border-none w-20 text-xl focus:ring-green-500 focus:border-green-500'
+                        class='flex justify-center lg:p-5 p-4 lg:pl-8 pl-[26px] bg-green-50 border-none w-16 lg:w-20 text-xl focus:ring-green-500 focus:border-green-500'
                         placeholder='0'>
                     <input type='text' maxlength='1' oninput='focusNext(this)' name='otp5'
-                        class='flex justify-center p-5 pl-8 bg-green-50 border-none w-20 text-xl focus:ring-green-500 focus:border-green-500'
+                        class='flex justify-center lg:p-5 p-4 lg:pl-8 pl-[26px] bg-green-50 border-none w-16 lg:w-20 text-xl focus:ring-green-500 focus:border-green-500'
                         placeholder='0'>
                     <input type='text' maxlength='1' oninput='focusNext(this)' name='otp6'
-                        class='flex justify-center p-5 pl-8 bg-green-50 border-none w-20 text-xl focus:ring-green-500 focus:border-green-500'
+                        class='flex justify-center lg:p-5 p-4 lg:pl-8 pl-[26px] bg-green-50 border-none w-16 lg:w-20 text-xl focus:ring-green-500 focus:border-green-500'
                         placeholder='0'>
                 </div>
                 <button type='submit'

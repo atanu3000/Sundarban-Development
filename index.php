@@ -101,13 +101,13 @@ session_start();
     </div>
 
     <div class="w-full mx-auto flex flex-col justify-center">
-        <div class="mx-auto w-[95vw] py-20 overflow-hidden">
+        <div class="mx-auto md:w-[95vw] w-[98vw] py-20 overflow-hidden">
             <img src="./asset/image.jpg" alt="" class="hover:scale-105 transition duration-300 ease-in-out">
         </div>
         <div class="py-20 content-box box1">
             <div class="relative z-10 px-5 mx-auto flex flex-wrap items-center justify-center gap-10">
                 <div class="text flex flex-col w-[90vw] sm:w-[45vw]">
-                    <h1 class="text-2xl md:text-5xl text-green-900 font-semibold"><span
+                    <h1 class="text-3xl md:text-5xl text-green-900 font-semibold"><span
                             class=" md:text-6xl">S</span>undarbans and Honey
                     </h1>
                     <p class="text-xl  mt-8 font-bold text-green-900 leading-10">There are many different species of
@@ -126,7 +126,7 @@ session_start();
             <div
                 class="px-5 flex flex-row-reverse flex-wrap  md:flex-wrap   mx-auto items-center justify-center gap-10">
                 <div class="text flex flex-col w-[90vw] sm:w-[45vw] pl-10">
-                    <h1 class="text-2xl md:text-4xl text-green-900 font-semibold"><span class=" md:text-5xl">W</span>hy
+                    <h1 class="text-3xl md:text-4xl text-green-900 font-semibold"><span class=" md:text-5xl">W</span>hy
                         you should choose Sundarini
                     </h1>
                     <p class="text-2xl text-gray-600 mt-8">A team of young professionals, technical experts
@@ -180,7 +180,7 @@ session_start();
         <div class="py-20">
             <div class="md:w-[70vw] mx-auto flex items-center justify-center gap-10 flex-col">
                 <div class="flex flex-col mx-auto">
-                    <h1 class="text-2xl md:text-4xl text-green-700 font-semibold text-center capitalize sm:pb-10"><span
+                    <h1 class="text-3xl md:text-4xl text-green-700 font-semibold text-center capitalize sm:pb-10"><span
                             class=" md:text-5xl">O</span>ur best selling products
                     </h1>
                 </div>
@@ -321,7 +321,7 @@ session_start();
         <div class="py-20">
             <div class="md:w-[70vw] mx-auto">
                 <div class="flex flex-col items-center">
-                    <h1 class="text-2xl md:text-4xl text-green-700 font-semibold text-center capitalize pb-20"><span
+                    <h1 class="text-3xl md:text-4xl text-green-700 font-semibold text-center capitalize pb-20"><span
                             class="text-3xl md:text-5xl">O</span>ur customer's
                         reviews</h1>
                     <div class="flex flex-wrap justify-center gap-10 mx-auto">
@@ -370,7 +370,7 @@ session_start();
                             <div class="absolute bottom-6 flex gap-5 items-center">
                                 <img src="https://eportal.sundarini.organic/assets/images/thumb/1696485091-1696485091-155344644.jpg" class="w-14 rounded-full" alt=""
                                     class="rounded-full w-10">
-                                <p class="text-2xl font-semibold">Tanima Das</p>
+                                <p class="text-2xl font-semibold">Mrinal Das</p>
                             </div>
                         </div>
                     </div>
