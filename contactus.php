@@ -98,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' ) {
                         <div class="relative">
                             <textarea name="message" id="message" rows="4"
                                 class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-green-500 focus:border-green-500 resize-none"
-                                required placeholder="Leave a comment..."></textarea>
+                                required placeholder="Hey <?php echo $_SESSION["name"]; ?>, Please leave a comment..."></textarea>
                             <p class="mt-2 text-sm text-red-600 dark:text-red-500">
                                 <?php if (isset($error)) { ?>
                                     <span class="font-medium">Oops!</span>

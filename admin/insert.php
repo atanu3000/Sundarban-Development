@@ -10,7 +10,7 @@ $image = $_FILES["image"]["name"];
 $image = time().$image;
 $path = $_FILES["image"]["tmp_name"];
 
-move_uploaded_file($path, "images/".$image);
+move_uploaded_file($path, "./include/form/images/".$image);
 
 $category = $_POST["category"];
 

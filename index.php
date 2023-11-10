@@ -101,7 +101,7 @@ session_start();
     </div>
 
     <div class="w-full mx-auto flex flex-col justify-center">
-        <div class="mx-auto md:w-[95vw] w-[98vw] py-20 overflow-hidden">
+        <div class="mx-auto md:w-[95vw] w-[98vw] py-8 overflow-hidden">
             <img src="./asset/image.jpg" alt="" class="hover:scale-105 transition duration-300 ease-in-out">
         </div>
         <div class="py-20 content-box box1">
@@ -110,7 +110,7 @@ session_start();
                     <h1 class="text-3xl md:text-5xl text-green-900 font-semibold"><span
                             class=" md:text-6xl">S</span>undarbans and Honey
                     </h1>
-                    <p class="text-xl  mt-8 font-bold text-green-900 leading-10">There are many different species of
+                    <p class="text-2xl  mt-8 font-semibold leading-10">There are many different species of
                         bees in the Sundarbans and among them, apis dorsata type of bee comparatively makes more hives
                         and honey. It is said that the honey collected from these hives are the best honey of the
                         Sundarbans. This honey is dark red in colour and wild in taste with great medicinal values.</p>

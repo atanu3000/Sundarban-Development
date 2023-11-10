@@ -11,7 +11,7 @@
         body::-webkit-scrollbar {
             display: block;
             width: 8px;
-            background-color: #f5f3f4;
+            background-color: #f0fdf4;
         }
 
         body::-webkit-scrollbar-thumb {
